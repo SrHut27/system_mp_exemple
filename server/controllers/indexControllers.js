@@ -6,6 +6,7 @@ const contactEmail = require('./email/contact');
 // Conectando ao banco de dados, usando a instância importada:
 connection.connect((error) => {
     if (error) throw error;
+    return;
 })
 
 // Helpers para uso durante a execução do códiog:
