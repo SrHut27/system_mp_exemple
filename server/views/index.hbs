@@ -6,42 +6,30 @@
                     <div class="col-xl-6">
                         <div class="text-center text-white">
                             <!-- Page heading-->
-                            <h1 class="mb-5">Protifólio educacional Escola Maria Peregrina - Por Gabriel Ribeiro de Freitas</h1>
-                            <!-- Signup form-->
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- * * SB Forms Contact Form * *-->
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- This form is pre-integrated with SB Forms.-->
-                            <!-- To make this form functional, sign up at-->
-                            <!-- https://startbootstrap.com/solution/contact-forms-->
-                            <!-- to get an API token!-->
-                            <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                                <!-- Email address input-->
-                                <div class="row">
-                                    <div class="col">
-                                        <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Entre em contato comigo..." data-sb-validations="required,email" />
-                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">Se desejar enviar, digite seu email.</div>
-                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Este endereço de email não é válido.</div>
-                                    </div>
-                                    <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Enviar</button></div>
+                            <h1 class="mb-5">Instrução educacional Escola Maria Peregrina - Time de desenvolvimento</h1>
+                        <form class="form-subscribe" id="contactForm" method="POST" action="/form">
+                            <!-- Email address input-->
+                            <div class="row">
+                                <div class="col">
+                                    <input class="form-control form-control-lg" name="emailAddress" id="emailAddress" type="email" placeholder="Entre em contato comigo..." required />
+                                    <div class="invalid-feedback text-white">Por favor, insira um endereço de e-mail válido.</div>
                                 </div>
-                                <!-- Submit success message-->
-                                <!---->
-                                <!-- This is what your users will see when the form-->
-                                <!-- has successfully submitted-->
-                                <div class="d-none" id="submitSuccessMessage">
-                                    <div class="text-center mb-3">
-                                        <div class="fw-bolder">Cadastro realizado com sucesso!</div>
-                                        <p>Mandei um email para você que quer conhecer sobre os meus projetos!</p>
-                                        <a class="text-white mb-5" href="https:https://github.com/SrHut27/">Protifólio Gabriel Ribeiro de Freitas -> Clique em mim!</a>
-                                    </div>
+                                <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Enviar</button></div>
+                            </div>
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Cadastro realizado com sucesso!</div>
+                                    <p>Mandei um email para você que quer conhecer sobre os meus projetos!</p>
+                                    <a class="text-white mb-5" href="https://github.com/SrHut27/">Protifólio Gabriel Ribeiro de Freitas -> Clique em mim!</a>
                                 </div>
-                                <!-- Submit error message-->
-                                <!---->
-                                <!-- This is what your users will see when there is-->
-                                <!-- an error submitting the form-->
-                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            </form>
+                            </div>
+                            {{#if messages}}
+                                    {{#each messages}}
+                                        {{this}}
+                                    {{/each}}
+                            {{/if}}
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Erro ao enviar mensagem!</div></div>
+                        </form>
                         </div>
                     </div>
                 </div>
@@ -82,21 +70,21 @@
                     <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-suco.png')"></div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text">
                         <h2>Projeto Suco Maria Peregrina</h2>
-                        <p class="lead mb-0">Conheça um produto 100% natural, sem adição de açúcares e/ou conservantes. Laranja expremida do copo para sua mesa! Faça seu plano de asinatura e receba o Suco Maria Peregrina na sua casa!</p>
+                        <p class="lead mb-0">Fazer um sistema completo de recuperação e tratamento de leads e tentar automatizá-lo. Após isso, fazer um site e-commerce ligado às entregas do produto e confirmação automática de entregas.</p>
                     </div>
                 </div>
                 <div class="row g-0">
-                    <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-2.jpg')"></div>
+                    <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/bg-brecho.png')"></div>
                     <div class="col-lg-6 my-auto showcase-text">
-                        <h2>Updated For Bootstrap 5</h2>
-                        <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 5 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 5!</p>
+                        <h2>Brechó Maria Peregrina</h2>
+                        <p class="lead mb-0">Eu ainda não sei qual vai ser o sistema desenvolvido para o Brechó preciso de ideias muito obrigado.</p>
                     </div>
                 </div>
                 <div class="row g-0">
-                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-3.jpg')"></div>
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-nota.png')"></div>
                     <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                        <h2>Easy to Use & Customize</h2>
-                        <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
+                        <h2>Nota Fiscal Paulista</h2>
+                        <p class="lead mb-0">Criar um sistema de consulta e filtro eficaz, rápido e interativo, para vizualizar de forma objetiva o resultado ca campanha da nota. Após isso, tentar vetorizar os resultados através de gráficos</p>
                     </div>
                 </div>
             </div>
@@ -104,25 +92,25 @@
         <!-- Testimonials-->
         <section class="testimonials text-center bg-light">
             <div class="container">
-                <h2 class="mb-5">What people are saying...</h2>
+                <h2 class="mb-5">Conheça a coordenação</h2>
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                            <img class="img-fluid rounded-circle mb-3" src="assets/img/bg-here.png" alt="..." />
+                            <h5>Rogério Fischer Duque</h5>
+                            <p class="font-weight-light mb-0">Responsável pelo projeto e representante da Escola Maria Peregrina</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                            <img class="img-fluid rounded-circle mb-3" src="assets/img/bg-fabrizio.png" alt="..." />
+                            <h5>Professor Fabrízio</h5>
+                            <p class="font-weight-light mb-0">Criador do projeto, responsável pelas equipes e sabe das coisas</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
                             <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-1.jpg" alt="..." />
-                            <h5>Margaret E.</h5>
-                            <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-2.jpg" alt="..." />
-                            <h5>Fred S.</h5>
-                            <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-3.jpg" alt="..." />
                             <h5>Sarah W.</h5>
                             <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
                         </div>
@@ -135,41 +123,24 @@
             <div class="container position-relative">
                 <div class="row justify-content-center">
                     <div class="col-xl-6">
-                        <h2 class="mb-4">Ready to get started? Sign up now!</h2>
-                        <!-- Signup form-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form class="form-subscribe" id="contactFormFooter" data-sb-form-api-token="API_TOKEN">
+                        <h2 class="mb-4">Te convenci a participar desse projeto? Não? Então deixe seu email que vou te convencer agora!</h2>
+                                <form class="form-subscribe" id="contactForm" method="POST" action="/form">
                             <!-- Email address input-->
                             <div class="row">
                                 <div class="col">
-                                    <input class="form-control form-control-lg" name="email" id="emailAddressBelow" type="email" placeholder="Email Address" data-sb-validations="required,email" />
-                                    <div class="invalid-feedback text-white" data-sb-feedback="emailAddressBelow:required">Email Address is required.</div>
-                                    <div class="invalid-feedback text-white" data-sb-feedback="emailAddressBelow:email">Email Address Email is not valid.</div>
+                                    <input class="form-control form-control-lg" name="emailAddress" id="emailAddress" type="email" placeholder="Entre em contato comigo..." required />
+                                    <div class="invalid-feedback text-white">Por favor, insira um endereço de e-mail válido.</div>
                                 </div>
-                                <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                                <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Enviar</button></div>
                             </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    <p>To activate this form, sign up at</p>
-                                    <a class="text-white" href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                    <div class="fw-bolder">Cadastro realizado com sucesso!</div>
+                                    <p>Mandei um email para você que quer conhecer sobre os meus projetos!</p>
+                                    <a class="text-white mb-5" href="https://github.com/SrHut27/">Protifólio Gabriel Ribeiro de Freitas -> Clique em mim!</a>
                                 </div>
                             </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Erro ao enviar mensagem!</div></div>
                         </form>
                     </div>
                 </div>

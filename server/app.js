@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const PORT = 3001;
 
+// Instânciando o servidor usando a função express
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
