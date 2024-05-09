@@ -10,6 +10,8 @@ connection.connect((error) => {
 
 // Helpers para uso durante a execução do códiog:
 var messages = [];
+var resultado = [];
+var error = [];
 
 // Rotas usadas na aplicação, para renderizar templates e tratar dados (exemplo: formulário)
 
@@ -75,4 +77,35 @@ const sendForm = async (req, res) => {
     }
 }
 
-module.exports = { indexPage, helloWorld, sendForm }
+
+const showContacts = async (req, res) => {
+    resultado = [];
+    error = [];
+    try {
+        const existingContacts = await new Promise((resolve, reject) => {
+            connection.execute('SELECT * FROM emails', (error, results) => {
+                if (error) {
+                    reject(error);
+                    return;
+                };
+                resolve(results);
+            });
+        });
+
+        if (existingContacts.length === 0)  {
+            resultado = [];
+            error.push("Não há nenhum contato registrado no momento...");
+            res.render("contacts", {error: error});
+        } else {
+            resultado = existingContacts;
+            res.render("contacts", {resultado: resultado});
+        }
+
+    } catch (error) {
+        console.log(error);
+        res.send('No momento não foi possível fazer uma coneção com o banco de dados...');
+        return;
+    }
+}
+
+module.exports = { indexPage, helloWorld, sendForm, showContacts }
