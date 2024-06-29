@@ -4,7 +4,7 @@ const app = express();
 const hbs = require("express-handlebars");
 const bodyParser = require("body-parser");
 const path = require("path");
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 // Conectando ao banco de dados e criando tabelas:
 const { createAllTables } = require("./database/createTables");

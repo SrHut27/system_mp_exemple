@@ -12,6 +12,8 @@ CREATE TABLE IF NOT EXISTS leads (
     lead_email VARCHAR(255) NOT NULL,
     lead_phone VARCHAR(255) NOT NULL,
     lead_comment TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    origem VARCHAR(255) NOT NULL,
     lead_proj INT,
     FOREIGN KEY (lead_proj) REFERENCES projects(id)
 )
